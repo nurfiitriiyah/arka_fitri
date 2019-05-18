@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Cetak Gambar</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="row col-md-12" id="thisImage"></div>
+</body>
+
+<script>
+    createImage(800)
+
+    function createImage(data) {
+        var i = 0;
+        while (i < data) {
+            var k = 0;
+            while (k < data) {
+                if(k===i){
+                    $("#thisImage").append("x ")
+                }
+                else{
+                    if(k === (data-1)-i){
+                        $("#thisImage").append("x ")
+                    }
+                    else{
+                        $("#thisImage").append("= ")
+
+                    }
+                }
+                k++;
+            }
+            $("#thisImage").append("<br>")
+            i++;
+        }
+    }
+</script>
+</html>
